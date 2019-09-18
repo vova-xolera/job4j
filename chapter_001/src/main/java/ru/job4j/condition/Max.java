@@ -5,5 +5,4 @@ public class Max {
             int result = left<=right? right : left;
             return result;
         }
-
 }

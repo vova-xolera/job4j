@@ -25,5 +25,4 @@ public class MaxTest {
         int result = Max.max(2, 2);
         assertThat(result, is(2));
     }
-
 }
