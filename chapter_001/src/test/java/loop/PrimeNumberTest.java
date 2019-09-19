@@ -20,7 +20,6 @@ public class PrimeNumberTest {
         int count = prime.calc(11);
         assertThat(count, is(5));
     }
-
     @Test
     public void when1() {
         PrimeNumber prime = new PrimeNumber();
