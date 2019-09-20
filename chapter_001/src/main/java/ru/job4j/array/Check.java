@@ -2,17 +2,15 @@ package ru.job4j.array;
 
 public class Check {
     public boolean mono(boolean[] data) {
-        boolean result = false;
+        boolean result = true;
+        boolean temp = data[0];
         int index = 1;
         while (index < data.length) {
-          if (data[index] == data[index - 1]) {
-              result = true;
-              index++;
-          }
-          else {
+          if (data[index] =! temp) {
               result = false;
               break;
           }
+            index++;
         }
         return result;
     }
