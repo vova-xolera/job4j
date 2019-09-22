@@ -9,16 +9,16 @@ public class MatrixCheck {
                 System.out.print(sign);
                 int cellCount = 0;
                 int rowCount = 0;
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < board.length; i++) {
                     if(board[row][i] == 'X') {
                         cellCount++;
-                        if (cellCount == 5) result = true;
                     }
                     if(board[i][cell] == 'X') {
                         rowCount++;
-                        if (rowCount == 5) result = true;
                     }
                 }
+                if (cellCount == board.length) result = true;
+                if (rowCount == board.length) result = true;
             }
             System.out.println();
         }
