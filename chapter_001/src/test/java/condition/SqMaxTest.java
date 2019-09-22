@@ -54,7 +54,7 @@ public class SqMaxTest {
     @Test
     public void whenAllEquals() {
         int first = 5;
-        int second =5;
+        int second = 5;
         int third = 5;
         int forth = 5;
         int expected = 5;

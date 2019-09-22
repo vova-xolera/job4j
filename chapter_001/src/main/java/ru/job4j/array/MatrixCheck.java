@@ -10,15 +10,19 @@ public class MatrixCheck {
                 int cellCount = 0;
                 int rowCount = 0;
                 for (int i = 0; i < board.length; i++) {
-                    if(board[row][i] == 'X') {
+                    if (board[row][i] == 'X') {
                         cellCount++;
                     }
-                    if(board[i][cell] == 'X') {
+                    if (board[i][cell] == 'X') {
                         rowCount++;
                     }
                 }
-                if (cellCount == board.length) result = true;
-                if (rowCount == board.length) result = true;
+                if (cellCount == board.length) {
+                    result = true;
+                }
+                if (rowCount == board.length) {
+                    result = true;
+                }
             }
             System.out.println();
         }

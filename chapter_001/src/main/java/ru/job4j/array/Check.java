@@ -6,7 +6,7 @@ public class Check {
         boolean temp = data[0];
         int index = 1;
         while (index < data.length) {
-          if (data[index] =! temp) {
+          if (data[index] != temp) {
               result = false;
               break;
           }
