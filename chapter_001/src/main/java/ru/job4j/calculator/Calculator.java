@@ -1,5 +1,4 @@
 package ru.job4j.calculator;
-
 /**
  * Package for calculate task.
  *
@@ -7,9 +6,7 @@ package ru.job4j.calculator;
  * @version 19.09.2019
  * @since 1.1
  */
-
 public class Calculator {
-
     /**
      * Сложение
      * @param first первый аргумент
@@ -20,7 +17,6 @@ public class Calculator {
         double result = first + second;
         System.out.println(first + " + " + second + " = " + result);
     }
-
     /**
      * Деление
      * @param first первый аргумент
@@ -31,7 +27,6 @@ public class Calculator {
         double result = first / second;
         System.out.println(first + " / " + second + " = " + result);
     }
-
     /**
      * Умножение
      * @param first первый аргумент
@@ -42,7 +37,6 @@ public class Calculator {
         double result = first * second;
         System.out.println(first + " * " + second + " = " + result);
     }
-
     /**
      * Вычитание
      * @param first первый аргумент
@@ -53,7 +47,6 @@ public class Calculator {
         double result = first - second;
         System.out.println(first + " - " + second + " = " + result);
     }
-
     /** Конструктор, проверка работоспособности вышеперчисленных методов
      *
      * @param args - args

@@ -18,7 +18,6 @@ public class MergeTest {
         );
         assertThat(result, is(expect));
     }
-
     @Test
     public void whenAscOrder() {
         Merge algo = new Merge();
@@ -29,7 +28,6 @@ public class MergeTest {
         );
         assertThat(result, is(expect));
     }
-
     @Test
     public void whenLeftLess() {
         Merge algo = new Merge();
@@ -40,7 +38,6 @@ public class MergeTest {
         );
         assertThat(result, is(expect));
     }
-
     @Test
     public void whenLeftGreat() {
         Merge algo = new Merge();
@@ -51,7 +48,6 @@ public class MergeTest {
         );
         assertThat(result, is(expect));
     }
-
     @Test
     public void whenLeftEmpty() {
         Merge algo = new Merge();

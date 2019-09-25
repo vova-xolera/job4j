@@ -1,8 +1,5 @@
 package ru.job4j.condition;
 
-
-
-
 public class TruckerJob {
     public static void main(String[] args) {
          Driver steve = new  Driver();
@@ -18,9 +15,6 @@ public class TruckerJob {
             java.lang.System.out.println("Steve works in taxi.");
         } else {
             java.lang.System.out.println("Steve does not have a job, but ride on motorbike!");
-
         }
     }
-
-
 }
