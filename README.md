@@ -2,4 +2,4 @@
 Я начал курс job4j в 2019 и планирую закончить в этом же году.
 "Объединение зафиксированных изменений" ЫЫЫ
 wasdfsadgdfgdfhf
-sxfdgerter
+keqrpodgjsdpirjgtpserjmg;prsmg
