@@ -47,7 +47,8 @@ public class Shop {
                 System.out.println("null");
             }
         }
-        products = new Shop().delete(products, 0);
+        Shop shop = new Shop();
+        products = shop.delete(products, 0);
         System.out.println("");
 
         for (int i = 0; i < products.length; i++) {
