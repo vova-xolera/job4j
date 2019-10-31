@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 import ru.job4j.tracker.animals.Item;
-
 import java.util.Arrays;
 import java.util.Random;
 
@@ -51,7 +50,7 @@ public class Tracker {
         return result;
     }
 
-    Item[] findAll() {
+    public Item[] findAll() {
         return Arrays.copyOf(this.items, this.position);
     }
 

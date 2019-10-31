@@ -1,5 +1,6 @@
-package ru.job4j.tracker;
+package ru.job4j.start;
 
+import ru.job4j.tracker.Tracker;
 import ru.job4j.tracker.animals.Item;
 
 import java.util.Scanner;
