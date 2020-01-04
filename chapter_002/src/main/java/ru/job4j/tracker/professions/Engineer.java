@@ -9,7 +9,7 @@ public class Engineer extends Profession {
     public int getSalary() {
         return  salary;
     }
-    public void sufferings(Programmer programmer){
+    public void sufferings(Programmer programmer) {
 
     }
 }

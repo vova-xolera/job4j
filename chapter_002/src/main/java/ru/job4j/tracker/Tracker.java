@@ -22,7 +22,7 @@ public class Tracker {
 
     public boolean replace(String id, Item item) {
         boolean result = false;
-        for(int index = 0; index < this.position; index++) {
+        for (int index = 0; index < this.position; index++) {
           if (id.equals(this.items[index].getId())) {
               this.items[index] = item;
               item.setId(id);
@@ -35,12 +35,11 @@ public class Tracker {
 
     public boolean delete(String id) {
         boolean result = false;
-        for(int index = 0; index < this.position; index++) {
-            if(this.items[index].getId().equals(id)) {
+        for (int index = 0; index < this.position; index++) {
+            if (this.items[index].getId().equals(id)) {
                 if (index == this.position) {
                     this.items[index] = null;
-                }
-                else {
+                } else {
                     System.arraycopy(this.items, index + 1, this.items, index, this.position - index - 1);
                 }
                 result = true;
@@ -57,8 +56,8 @@ public class Tracker {
     public  Item[] findByName(String key) {
         Item[] temp = new Item[this.position];
         int number = 0;
-        for(int index = 0; index < this.position; index++) {
-            if(key.equals(this.items[index].getName())) {
+        for (int index = 0; index < this.position; index++) {
+            if (key.equals(this.items[index].getName())) {
                 temp[number] = this.items[index];
                 number++;
             }
@@ -68,8 +67,8 @@ public class Tracker {
 
     public Item findById(String id) {
         Item item = null;
-        for(int index = 0; index < this.position; index++) {
-            if(id.equals(this.items[index].getId())) {
+        for (int index = 0; index < this.position; index++) {
+            if (id.equals(this.items[index].getId())) {
                 item = this.items[index];
                 break;
             }

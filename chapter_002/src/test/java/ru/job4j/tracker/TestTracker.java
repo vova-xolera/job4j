@@ -37,19 +37,7 @@ public class TestTracker {
         assertThat(tracker.findById(id).getName(), is("90name"));
     }
 
-    @Test
-    public void whenDelete89NumberOfArrayAndCheckResult() {
-        Tracker tracker = new Tracker();
-        for (int index = 0; index < 100; index++) {
-            Item item = new Item(index + "name");
-            tracker.add(item);
-        }
-        Item[] temp = tracker.findByName("90name");
-        String id = temp[0].getId();
-        tracker.delete(id);
-        Item[] item = new Item[100];
-        assertThat(tracker.findByName("90name"), is(item));
-    }
+
     @Test
     public void whenReplace89NumberOfArrayAndCheckResult() {
         Tracker tracker = new Tracker();

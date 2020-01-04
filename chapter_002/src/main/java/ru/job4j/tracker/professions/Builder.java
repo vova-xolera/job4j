@@ -1,8 +1,8 @@
 package ru.job4j.tracker.professions;
 
 public class Builder extends Programmer {
-    private int ConstructedBuilding;
-    public int GetConstructedBuilding() {
-        return ConstructedBuilding;
+    private int constructedBuilding;
+    public int getConstructedBuilding() {
+        return constructedBuilding;
     }
 }
