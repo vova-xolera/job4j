@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 
-import ru.job4j.tracker.animals.Item;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -66,14 +65,18 @@ public class Tracker {
     }
 
     public Item findById(String id) {
-        Item item = null;
-        for (int index = 0; index < this.position; index++) {
-            if (id.equals(this.items[index].getId())) {
-                item = this.items[index];
+        return items[indexOf(id)];
+    }
+
+    private int indexOf(String id) {
+        int rsl = -1;
+        for (int index = 0; index < position; index++) {
+            if (items[index].getId().equals(id)) {
+                rsl = index;
                 break;
             }
         }
-        return item;
+        return rsl;
     }
 
 }
