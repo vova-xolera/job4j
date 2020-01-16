@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.StringJoiner;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -32,15 +33,12 @@ public class PaintTest {
         assertThat(
                 new String(out.toByteArray()),
                 is(
-                        new StringBuilder()
-                                .append("++++")
-                                .append("\n")
-                                .append("+  +")
-                                .append("\n")
-                                .append("+  +")
-                                .append("\n")
-                                .append("++++")
-                                .append(System.lineSeparator())
+                        new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                                .add("++++")
+                                .add("+  +")
+                                .add("+  +")
+                                .add("++++")
+                                .add("")
                                 .toString()
                 )
         );
@@ -52,15 +50,12 @@ public class PaintTest {
         assertThat(
                 new String(out.toByteArray()),
                 is(
-                        new StringBuilder()
-                                .append("+++++++")
-                                .append("\n")
-                                .append(" +   +")
-                                .append("\n")
-                                .append("  + +")
-                                .append("\n")
-                                .append("   +")
-                                .append(System.lineSeparator())
+                         new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                                .add("+++++++")
+                                .add(" +   +")
+                                .add("  + +")
+                                .add("   +")
+                                 .add("")
                                 .toString()
                 )
         );

@@ -14,12 +14,13 @@ public class TriangleTest {
                 is(
                         new StringBuilder()
                                 .append("+++++++")
-                                .append("\n")
+                                .append(System.lineSeparator())
                                 .append(" +   +")
-                                .append("\n")
+                                .append(System.lineSeparator())
                                 .append("  + +")
-                                .append("\n")
+                                .append(System.lineSeparator())
                                 .append("   +")
+                                .append(System.lineSeparator())
                                 .toString()
                 )
         );

@@ -1,15 +1,15 @@
 package ru.job4j.stragery;
 
+import java.util.StringJoiner;
+
 public class Square implements Shape {
     public String draw() {
-        StringBuilder pic = new StringBuilder();
-        pic.append("++++");
-        pic.append("\n");
-        pic.append("+  +");
-        pic.append("\n");
-        pic.append("+  +");
-        pic.append("\n");
-        pic.append("++++");
-        return pic.toString();
+        String square = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+        .add("++++")
+        .add("+  +")
+        .add("+  +")
+        .add("++++")
+        .toString();
+        return square;
     }
 }
