@@ -11,18 +11,12 @@ public class EditItem implements UserAction {
             System.out.println("At first add item");
         } else {
             String id = input.askStr("Enter id ");
-            boolean result = false;
-            for (int i = 0; i < temp.length; i++) {
-                if (id.equals(temp[i].getId())) {
+            for (Item value : temp) {
+                if (id.equals(value.getId())) {
                     String name = input.askStr("Enter name ");
                     Item item = new Item(name);
-                    result = tracker.replace(id, item);
+                    tracker.replace(id, item);
                 }
-            }
-            if (result) {
-                System.out.println("Operation completed");
-            } else {
-                System.out.println("Error");
             }
         }
         return true;
