@@ -8,7 +8,7 @@ public class StartUI {
             this.showMenu(actions);
             int select = input.askInt("Select: ");
             UserAction action = actions[select];
-            run = action.execute(input, tracker, action);
+            run = action.execute(input, tracker);
         }
     }
 
@@ -22,7 +22,15 @@ public class StartUI {
     public static void main(String[] args) {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
-        UserAction[] actions = new ConsoleInput().actions();
+        UserAction[] actions = {
+                new CreateAction(),
+                new FindAllAction(),
+                new EditItem(),
+                new DeleteItem(),
+                new FindItemById(),
+                new FindItemByName(),
+                new ExitProgramm()
+        };
         new StartUI().init(input, tracker, actions);
     }
 }

@@ -16,13 +16,4 @@ public class ConsoleInput implements Input {
         return Integer.valueOf(askStr(question));
     }
 
-    public CreateAction[] actions() {
-        CreateAction[] act = new CreateAction[7];
-        for (int number = 0; number < 7; number++) {
-            CreateAction action = new CreateAction();
-            act[number] = action;
-            action.setPosition(number);
-        }
-        return act;
-    }
 }
