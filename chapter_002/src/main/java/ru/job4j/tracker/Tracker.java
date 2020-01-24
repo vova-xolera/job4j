@@ -21,30 +21,23 @@ public class Tracker {
 
     public boolean replace(String id, Item item) {
         boolean result = false;
-        for (int index = 0; index < this.position; index++) {
-          if (id.equals(this.items[index].getId())) {
-              this.items[index] = item;
-              item.setId(id);
-              result = true;
-              break;
-          }
-        }
+        int index = indexOf(id);
+            if (index != -1) {
+                this.items[index] = item;
+                item.setId(id);
+                result = true;
+            }
         return result;
     }
 
     public boolean delete(String id) {
         boolean result = false;
-        for (int index = 0; index < this.position; index++) {
-            if (this.items[index].getId().equals(id)) {
-                if (index == this.position) {
-                    this.items[index] = null;
-                } else {
+                int index = indexOf(id);
+                if (index != -1) {
                     System.arraycopy(this.items, index + 1, this.items, index, this.position - index - 1);
+                    result = true;
+                    position--;
                 }
-                result = true;
-                position--;
-            }
-        }
         return result;
     }
 
@@ -65,8 +58,9 @@ public class Tracker {
     }
 
     public Item findById(String id) {
-        if (indexOf((id)) == -1) return null;
-        else return items[indexOf(id)];
+        int index = indexOf(id);
+        if (index == -1) return null;
+        else return items[index];
     }
 
     private int indexOf(String id) {
