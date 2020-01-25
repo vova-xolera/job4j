@@ -8,7 +8,11 @@ public class EditItem implements UserAction {
             String id = input.askStr("Enter id ");
             String name = input.askStr("Enter name ");
             Item item = new Item(name);
-            tracker.replace(id, item);
+        if (tracker.replace(id, item)) {
+            System.out.println("Operation completed");
+        } else {
+            System.out.println("Error");
+        }
         return true;
     }
 
