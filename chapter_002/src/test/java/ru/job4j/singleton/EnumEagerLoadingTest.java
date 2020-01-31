@@ -5,9 +5,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 
-public class enumEagerloadingTest {
-    enumEagerloading tracker = enumEagerloading.INSTANCE;
-    enumEagerloading tracker2 = enumEagerloading.INSTANCE;
+public class EnumEagerLoadingTest {
+    EnumEagerLoading tracker = EnumEagerLoading.INSTANCE;
+    EnumEagerLoading tracker2 = EnumEagerLoading.INSTANCE;
     @Test
     public void ifTwoClasses() {
         assertThat(tracker, is (tracker2));

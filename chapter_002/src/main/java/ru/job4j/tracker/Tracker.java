@@ -22,22 +22,22 @@ public class Tracker {
     public boolean replace(String id, Item item) {
         boolean result = false;
         int index = indexOf(id);
-            if (index != -1) {
-                this.items[index] = item;
-                item.setId(id);
-                result = true;
-            }
+        if (index != -1) {
+            this.items[index] = item;
+            item.setId(id);
+            result = true;
+        }
         return result;
     }
 
     public boolean delete(String id) {
         boolean result = false;
-                int index = indexOf(id);
-                if (index != -1) {
-                    System.arraycopy(this.items, index + 1, this.items, index, this.position - index - 1);
-                    result = true;
-                    position--;
-                }
+        int index = indexOf(id);
+        if (index != -1) {
+            System.arraycopy(this.items, index + 1, this.items, index, this.position - index - 1);
+            result = true;
+            position--;
+        }
         return result;
     }
 
@@ -45,7 +45,7 @@ public class Tracker {
         return Arrays.copyOf(this.items, this.position);
     }
 
-    public  Item[] findByName(String key) {
+    public Item[] findByName(String key) {
         Item[] temp = new Item[this.position];
         int number = 0;
         for (int index = 0; index < this.position; index++) {
