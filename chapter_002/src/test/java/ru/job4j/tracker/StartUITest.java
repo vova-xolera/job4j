@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.StringJoiner;
 
 import static org.hamcrest.core.Is.is;
@@ -20,8 +21,9 @@ public class StartUITest {
         StubInput input = new StubInput(
                 new String[]{"0"}
         );
-        StubAction action = new StubAction();
-        new StartUI().init(input, new Tracker(), new UserAction[]{action});
+        ArrayList<UserAction> list = new ArrayList<>();
+        list.add(new StubAction());
+        new StartUI().init(input, new Tracker(),list);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("Menu.")
                 .add("0. Stub action")

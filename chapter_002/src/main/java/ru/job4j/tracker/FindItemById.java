@@ -5,7 +5,7 @@ public class FindItemById implements UserAction {
     @Override
     public boolean execute(Input input, Tracker tracker) {
         System.out.println("=== Find item by id ====");
-        if (tracker.findAll().length == 0) {
+        if (tracker.findAll().size() == 0) {
             System.out.println("At first add item");
         }
         else {

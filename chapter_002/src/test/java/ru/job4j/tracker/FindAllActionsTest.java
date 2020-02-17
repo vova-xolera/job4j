@@ -22,6 +22,7 @@ public class FindAllActionsTest {
         FindAllAction act = new FindAllAction();
         act.execute(new StubInput(new String[] {}), tracker);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                .add("==== Show all items ====")
                 .add(item.getId() + " " + item.getName())
                 .toString();
         assertThat(new String(out.toByteArray()), is(expect));

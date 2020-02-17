@@ -1,17 +1,16 @@
 package ru.job4j.tracker;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Tracker {
 
-    private final Item[] items = new Item[100];
+    private final ArrayList<Item> items = new ArrayList<>();
     private final static Random RN = new Random();
-    private int position = 0;
 
     public Item add(Item item) {
         item.setId(this.generateId());
-        this.items[this.position++] = item;
+        this.items.add(item);
         return item;
     }
 
@@ -23,7 +22,8 @@ public class Tracker {
         boolean result = false;
         int index = indexOf(id);
         if (index != -1) {
-            this.items[index] = item;
+            this.items.remove(index);
+            this.items.add(index,item);
             item.setId(id);
             result = true;
         }
@@ -34,39 +34,36 @@ public class Tracker {
         boolean result = false;
         int index = indexOf(id);
         if (index != -1) {
-            System.arraycopy(this.items, index + 1, this.items, index, this.position - index - 1);
+           this.items.remove(index);
             result = true;
-            position--;
         }
         return result;
     }
 
-    public Item[] findAll() {
-        return Arrays.copyOf(this.items, this.position);
+    public ArrayList<Item> findAll() {
+        return items;
     }
 
-    public Item[] findByName(String key) {
-        Item[] temp = new Item[this.position];
-        int number = 0;
-        for (int index = 0; index < this.position; index++) {
-            if (key.equals(this.items[index].getName())) {
-                temp[number] = this.items[index];
-                number++;
+    public ArrayList<Item> findByName(String key) {
+        ArrayList<Item> temp = new ArrayList<>();
+        for (Item item : items) {
+            if (key.equals(item.getName())) {
+                temp.add(item);
             }
         }
-        return Arrays.copyOf(temp, number);
+        return temp;
     }
 
     public Item findById(String id) {
         int index = indexOf(id);
         if (index == -1) return null;
-        else return items[index];
+        else return items.get(index);
     }
 
     private int indexOf(String id) {
         int rsl = -1;
-        for (int index = 0; index < position; index++) {
-            if (items[index].getId().equals(id)) {
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId().equals(id)) {
                 rsl = index;
                 break;
             }
