@@ -1,7 +1,8 @@
 package condition;
 
+
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import ru.job4j.condition.Point;
 import ru.job4j.condition.Triangle;
