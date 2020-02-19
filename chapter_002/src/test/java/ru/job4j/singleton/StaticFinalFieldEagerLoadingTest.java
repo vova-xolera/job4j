@@ -9,8 +9,9 @@ import static org.hamcrest.Matchers.is;
 public class StaticFinalFieldEagerLoadingTest {
     Tracker tracker = StaticFinalFieldEagerLoading.getInstance();
     Tracker tracker2 = StaticFinalFieldEagerLoading.getInstance();
+
     @Test
     public void ifTwoClasses() {
-        assertThat(tracker, is (tracker2));
+        assertThat(tracker, is(tracker2));
     }
 }

@@ -11,7 +11,7 @@ import static org.junit.Assert.assertThat;
 public class JobTest {
 
     @Test
-    public void JobAscByName() {
+    public void jobAscByName() {
         Job job1 = new Job("Fix bug1", 1);
         Job job2 = new Job("Fix bug2", 4);
         Job job3 = new Job("Fix bug3", 2);
@@ -35,7 +35,7 @@ public class JobTest {
     }
 
     @Test
-    public void JobDescByName() {
+    public void jobDescByName() {
         Job job1 = new Job("Fix bug1", 1);
         Job job2 = new Job("Fix bug2", 4);
         Job job3 = new Job("Fix bug3", 2);
@@ -59,7 +59,7 @@ public class JobTest {
     }
 
     @Test
-    public void JobAscByPriority() {
+    public void jobAscByPriority() {
         Job job1 = new Job("Fix bug1", 1);
         Job job2 = new Job("Fix bug2", 4);
         Job job3 = new Job("Fix bug3", 2);
@@ -83,7 +83,7 @@ public class JobTest {
     }
 
     @Test
-    public void JobDescByPriority() {
+    public void jobDescByPriority() {
         Job job1 = new Job("Fix bug1", 1);
         Job job2 = new Job("Fix bug2", 4);
         Job job3 = new Job("Fix bug3", 2);
@@ -107,7 +107,7 @@ public class JobTest {
     }
 
     @Test
-    public void JobDescByPriorityAndDescByName() {
+    public void jobDescByPriorityAndDescByName() {
         Job job1 = new Job("Fix bug1", 2);
         Job job2 = new Job("Fix bug2", 4);
         Job job3 = new Job("Fix bug3", 2);
@@ -131,7 +131,7 @@ public class JobTest {
     }
 
     @Test
-    public void JobDescByPriorityAndAscByName() {
+    public void jobDescByPriorityAndAscByName() {
         Job job1 = new Job("Fix bug1", 2);
         Job job2 = new Job("Fix bug2", 4);
         Job job3 = new Job("Fix bug3", 2);

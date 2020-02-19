@@ -24,7 +24,7 @@ public class StartUITest {
         );
         List<UserAction> list = new ArrayList<>();
         list.add(new StubAction());
-        new StartUI().init(input, new Tracker(),list);
+        new StartUI().init(input, new Tracker(), list);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("Menu.")
                 .add("0. Stub action")

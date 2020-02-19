@@ -17,12 +17,10 @@ public class Merge {
                     rsl[r + l] = right[r];
                     r++;
                 }
-            }
-            else if (l == left.length) {
+            } else if (l == left.length) {
                 rsl[r + l] = right[r];
                 r++;
-            }
-            else {
+            } else {
                 rsl[r + l] = left[l];
                 l++;
             }
@@ -33,8 +31,8 @@ public class Merge {
     public static void main(String[] args) {
         Merge process = new Merge();
         int[] rsl = process.merge(
-                new int[] {1, 3, 5},
-                new int[] {2, 4}
+                new int[]{1, 3, 5},
+                new int[]{2, 4}
         );
         System.out.println(Arrays.toString(rsl));
     }

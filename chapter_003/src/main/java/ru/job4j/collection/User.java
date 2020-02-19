@@ -13,18 +13,24 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(User o) {
-         int index = this.name.compareTo(o.name);
-         if (index == 0) return Integer.compare(this.age, o.age);
-         return index;
+        int index = this.name.compareTo(o.name);
+        if (index == 0) {
+            return Integer.compare(this.age, o.age);
+        }
+        return index;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         User user = (User) o;
-        return age == user.age &&
-                Objects.equals(name, user.name);
+        return age == user.age
+                && Objects.equals(name, user.name);
     }
 
     @Override

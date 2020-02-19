@@ -24,7 +24,7 @@ public class Tracker {
         int index = indexOf(id);
         if (index != -1) {
             this.items.remove(index);
-            this.items.add(index,item);
+            this.items.add(index, item);
             item.setId(id);
             result = true;
         }
@@ -35,7 +35,7 @@ public class Tracker {
         boolean result = false;
         int index = indexOf(id);
         if (index != -1) {
-           this.items.remove(index);
+            this.items.remove(index);
             result = true;
         }
         return result;
@@ -57,8 +57,10 @@ public class Tracker {
 
     public Item findById(String id) {
         int index = indexOf(id);
-        if (index == -1) return null;
-        else return items.get(index);
+        if (index == -1) {
+            return null;
+        }
+        return items.get(index);
     }
 
     private int indexOf(String id) {

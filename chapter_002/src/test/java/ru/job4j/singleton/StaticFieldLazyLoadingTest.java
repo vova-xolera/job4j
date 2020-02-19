@@ -9,8 +9,9 @@ import static org.hamcrest.Matchers.is;
 public class StaticFieldLazyLoadingTest {
     Tracker tracker = StaticFieldLazyLoading.getInstance();
     Tracker tracker2 = StaticFieldLazyLoading.getInstance();
+
     @Test
     public void ifTwoClasses() {
-        assertThat(tracker, is (tracker2));
+        assertThat(tracker, is(tracker2));
     }
 }

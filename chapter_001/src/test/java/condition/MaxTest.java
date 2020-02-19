@@ -25,31 +25,37 @@ public class MaxTest {
         int result = Max.max(2, 2);
         assertThat(result, is(2));
     }
+
     @Test
     public void whenEqualToAll3() {
-        int result = Max.max(2, 2,2);
+        int result = Max.max(2, 2, 2);
         assertThat(result, is(2));
     }
+
     @Test
     public void whenMax3To1Then3() {
         int result = Max.max(2, 2, 5);
         assertThat(result, is(5));
     }
+
     @Test
     public void whenMax1To3Then3() {
         int result = Max.max(12, 2, 5);
         assertThat(result, is(12));
     }
+
     @Test
     public void whenEqualToAll4() {
-        int result = Max.max(2, 2,2,2);
+        int result = Max.max(2, 2, 2, 2);
         assertThat(result, is(2));
     }
+
     @Test
     public void whenMax4To1Then4() {
         int result = Max.max(2, 2, 5, 12);
         assertThat(result, is(12));
     }
+
     @Test
     public void whenMax1To4Then4() {
         int result = Max.max(12, 2, 5, 7);

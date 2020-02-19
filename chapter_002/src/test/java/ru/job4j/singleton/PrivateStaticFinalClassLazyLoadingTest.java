@@ -10,9 +10,10 @@ import static org.hamcrest.Matchers.is;
 public class PrivateStaticFinalClassLazyLoadingTest {
     Tracker tracker = PrivateStaticFinalClassLazyLoading.getInstance();
     Tracker tracker2 = PrivateStaticFinalClassLazyLoading.getInstance();
+
     @Test
     public void ifTwoClasses() {
-        assertThat(tracker, is (tracker2));
+        assertThat(tracker, is(tracker2));
     }
 }
 
