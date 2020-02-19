@@ -17,7 +17,6 @@ public class BankService {
         if (user != null) {
             List<Account> list = users.get(user);
             list.add(account);
-            users.putIfAbsent(user, list);
         }
     }
 
@@ -34,8 +33,15 @@ public class BankService {
 
     public Account findByRequisite(String passport, String requisite) {
         User user = findByPassport(passport);
-        List<Account> list = users.get(user);
-        return list.get(list.indexOf(new Account(requisite, -1)));
+        if (users.containsKey(user)) {
+            List<Account> list = users.get(user);
+            for (Account account : list) {
+                if (account.getRequisite().equals(requisite)) {
+                    return account;
+                }
+            }
+        }
+        return null;
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite,
