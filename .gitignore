@@ -65,7 +65,6 @@ jrebel.lic
 *.iws
 .*.sw?
 .idea/
-checkstyle.xml
 
 # paulp script
 /.lib/
