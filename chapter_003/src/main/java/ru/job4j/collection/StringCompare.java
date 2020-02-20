@@ -12,11 +12,10 @@ public class StringCompare implements Comparator<String> {
                 return def;
             }
         }
-        if (left.length() > right.length()) {
-            return left.charAt(length);
-        } else if (left.length() < right.length()) {
-            return -(right.charAt(length));
+        if (left.length() - right.length() != 0) {
+            return (left.length() - right.length());
         }
-        return 0;
+            return 0;
+
     }
 }
