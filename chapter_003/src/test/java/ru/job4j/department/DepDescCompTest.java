@@ -25,13 +25,4 @@ public class DepDescCompTest {
         assertThat(rsl, lessThan(0));
     }
 
-    @Test
-    public void whenUpDepartmentGoBefore() {
-        int rsl = new DepDescComp().compare(
-                "K2",
-                "K2/SK1"
-        );
-        assertThat(rsl, lessThan(0));
-    }
-
 }
