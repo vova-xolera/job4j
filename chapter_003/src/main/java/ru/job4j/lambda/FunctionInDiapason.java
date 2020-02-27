@@ -9,7 +9,7 @@ public class FunctionInDiapason {
     static List<Double> diapason(int start, int end, Function<Double, Double> func) {
         List<Double> list = new ArrayList<>();
         for (int index = start; index != end; index++) {
-            list.add(func.apply((double)index));
+            list.add(func.apply((double) index));
         }
         return list;
     }
