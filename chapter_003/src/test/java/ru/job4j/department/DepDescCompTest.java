@@ -10,17 +10,17 @@ public class DepDescCompTest {
     @Test
     public void compare() {
         int rsl = new DepDescComp().compare(
-                "K2/SK1/SSK2",
+                "K1/SK1/SSK1",
                 "K2/SK1/SSK1"
         );
         assertThat(rsl, lessThan(0));
     }
 
     @Test
-    public void thenFirstLengthLesser() {
+    public void whenUpDepartmentGoBefore() {
         int rsl = new DepDescComp().compare(
-                "K2/SK1/SSK2",
-                "K2/SK1/SSK2/SKK1"
+                "K2",
+                "K2/SK1"
         );
         assertThat(rsl, lessThan(0));
     }

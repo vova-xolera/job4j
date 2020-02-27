@@ -4,15 +4,15 @@ import java.util.Comparator;
 
 public class AscDescComp implements Comparator<String> {
     @Override
-    public int compare(String o1, String o2) {
-        String[] o1Array = o1.split("/");
-        String[] o2Array = o2.split("/");
-        if (o1Array.length == 1) {
-            return -1;
+    public int compare(String left, String right) {
+        String[] leftArr = left.split("/");
+        String[] rightArr = right.split("/");
+        if ((leftArr.length == 1 || rightArr.length == 1) && leftArr[0].equals(rightArr[0])) {
+            return leftArr.length - rightArr.length;
         }
-        if (o2Array.length == 1) {
-            return  1;
+        if (rightArr[0].compareTo(leftArr[0]) == 0) {
+            return right.compareTo(left);
         }
-    return o1Array[0].compareTo(o2Array[0]);
+        return 0;
     }
 }
