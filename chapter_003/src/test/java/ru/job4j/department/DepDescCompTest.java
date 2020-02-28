@@ -10,7 +10,7 @@ public class DepDescCompTest {
     @Test
     public void compare() {
         int rsl = new DepDescComp().compare(
-                "K1/SK1/SSK1",
+                "K2/SK1/SSK2",
                 "K2/SK1/SSK1"
         );
         assertThat(rsl, lessThan(0));

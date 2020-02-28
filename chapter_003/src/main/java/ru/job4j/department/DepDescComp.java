@@ -3,13 +3,17 @@ package ru.job4j.department;
 import java.util.Comparator;
 
 public class DepDescComp implements Comparator<String> {
-    @Override
     public int compare(String left, String right) {
-        String[] leftArr = left.split("/");
-        String[] rightArr = right.split("/");
-        if ((leftArr.length == 1 || rightArr.length == 1) && leftArr[0].equals(rightArr[0])) {
-                return leftArr.length - rightArr.length;
+        int length = Math.min(left.length(), right.length());
+        for (int i = 0; i < length; i++) {
+            int def = Character.compare(right.charAt(i), left.charAt(i));
+            if (def != 0) {
+                return def;
+            }
         }
-        return leftArr[0].compareTo(rightArr[0]);
+        if (left.length() - right.length() != 0) {
+            return (left.length() - right.length());
+        }
+        return 0;
     }
 }

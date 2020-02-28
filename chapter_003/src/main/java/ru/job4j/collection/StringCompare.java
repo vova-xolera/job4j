@@ -16,6 +16,5 @@ public class StringCompare implements Comparator<String> {
             return (left.length() - right.length());
         }
             return 0;
-
     }
 }
